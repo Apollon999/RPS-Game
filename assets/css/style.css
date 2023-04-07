@@ -66,6 +66,7 @@ body {
     font-weight: bold;
     color: azure;
     display: flex;
+    justify-content: center;
     justify-content: space-between;
 }
 
