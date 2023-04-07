@@ -57,24 +57,70 @@ body {
 
 /* Styling score-area here! */
 .score-area p {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
 }
   
 .score-area .scores {
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: bold;
     color: azure;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .score-area {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
+@media (max-width: 768px) {
 
+    .score-area p {
+        font-size: 2rem;
+    }
+
+    .score-area .scores {
+      font-size: 4rem;
+    }
+
+    .options {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .selection {
+      font-size: 6rem;
+      margin: 20px;
+    }
+  
+    .score-area {
+      flex-wrap: wrap;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .title {
+      font-size: 20px;
+    }
+  
+    .options {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .selection {
+      font-size: 4rem;
+      margin: 10px;
+    }
+  
+    .score-area {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
