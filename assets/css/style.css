@@ -1,0 +1,80 @@
+body {
+    background: #037971;
+}
+
+/* Title styling here!*/
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* Game-buttons styling here!*/
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.selection {
+    font-size: 10rem;
+    background: none;
+    border-color: azure;
+    border-style: inset;
+    border-width: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+}
+
+/* hover effect on buttons here! Code taken from https://youtu.be/Nmaw6pBEsI8 */
+.selection:hover {
+    color: azure;
+}
+
+.selection::before {
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0,7);
+    transform: scaleX(0);
+}
+
+.selection:hover::before {
+    transform: scaleX(1);
+}
+
+/* Styling score-area here! */
+.score-area p {
+    font-size: 5rem;
+    margin: 0;
+}
+  
+.score-area .scores {
+    font-size: 10rem;
+    font-weight: bold;
+    color: azure;
+    display: flex;
+    justify-content: center;
+}
+
+.score-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+
