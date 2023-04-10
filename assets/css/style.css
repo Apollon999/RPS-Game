@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
     background: #037971;
 }
@@ -6,17 +12,20 @@ body {
 .title {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 36px;
+    margin-top: 20px;
 }
 
 /* Game-buttons styling here!*/
 .options {
     display: flex;
     justify-content: center;
+    margin: 30px 0;
 }
 
 .selection {
     font-size: 10rem;
+    padding: 20px;
     background: none;
     border-color: azure;
     border-style: inset;
@@ -56,26 +65,22 @@ body {
 }
 
 /* Styling score-area here! */
-.score-area p {
-    font-size: 3rem;
-    margin: 0;
-}
-  
-.score-area .scores {
-    font-size: 6rem;
-    font-weight: bold;
-    color: azure;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-}
 
 .score-area {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.score-area div {
+  text-align: center;
+}
+
+.scores {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
