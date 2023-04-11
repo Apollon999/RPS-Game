@@ -1,16 +1,18 @@
-
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice () {
-   const rpsChoice =['Rock', 'Paper', 'Scissors'] 
-   const randomNumber = Math.floor(Math.random() * 3)
-   return rpsChoice[randomNumber]
+   const rpsChoice =['Rock', 'Paper', 'Scissors'];
+   const randomNumber = Math.floor(Math.random() * 3);
+   return rpsChoice[randomNumber];
 }
 
-function getResult () {
+function getResult (playerChoice, computerChoice) {
     
     let winner;
+
     if (playerChoice == computerChoice) {
-        winner = tie;
+        winner = 'tie';
     } else if (playerChoice == 'Rock' && computerChoice == 'Scissors') {
         winner = 'player';
     } else if (playerChoice == 'Paper' && computerChoice == 'Rock') {
@@ -20,16 +22,15 @@ function getResult () {
     } else {
         winner = 'computer';
     }
-    return winner;
-}
 
-let result = getResult(playerChoice, computerChoice);
-if (result == 'player') {
-    playerScore++;
-    document.getElementById('player-score').textContent = playerScore;
-} else if (result == 'computer') {
-    computerScore++;
-    document.getElementById('computer-score').textContent = computerScore;
+    if (winner == 'player') {
+        playerScore++;
+        document.getElementById('player-score').textContent = playerScore;
+    } else if (winner == 'computer') {
+        computerScore++;
+        document.getElementById('computer-score').textContent = computerScore;
+}
+    return winner;
 }
 
 function showResult () {
