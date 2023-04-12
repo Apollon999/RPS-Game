@@ -1,11 +1,17 @@
+// Declaring the variables playerScore and computerScore
+
 let playerScore = 0;
 let computerScore = 0;
+
+// Computer generates a random choice and returns it
 
 function getComputerChoice () {
    const rpsChoice =['Rock', 'Paper', 'Scissors'];
    const randomNumber = Math.floor(Math.random() * 3);
    return rpsChoice[randomNumber];
 }
+
+// Decides the winner of the game and adds one point to the winner or does nothning in the event of a tie.
 
 function getResult (playerChoice, computerChoice) {
     
@@ -33,17 +39,24 @@ function getResult (playerChoice, computerChoice) {
     return winner;
 }
 
-function showResult () {
-
-}
-
-function onClickRPS(PlayerChoice) {
-
+function onClickRPS(playerChoice) {
+console.log({playerChoice});
+const computerChoice = getComputerChoice();
+console.log({computerChoice})
+const winner = getResult (playerChoice, computerChoice);
+console.log({winner})
 }
 
 function playGame () {
+     const buttons = document.querySelectorAll('.selection');
+     console.log(buttons);
 
+     buttons.forEach(button => {
+        button.onclick = () => onClickRPS(button.value);
+     })
 }
+
+playGame()
 
 
 
