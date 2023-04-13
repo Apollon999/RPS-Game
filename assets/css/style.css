@@ -67,8 +67,7 @@ body {
 /* Styling score-area here! */
 
 .score-area {
-    display: flex;
-    justify-content: space-around;
+    display: block;
     padding: 20px;
     margin-top: 30px;
 }
@@ -81,6 +80,21 @@ body {
   font-size: 40px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.instructions {
+  margin-top: 100px;
+  background: azure;
+  font-size: 30px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {

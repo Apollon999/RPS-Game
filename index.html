@@ -11,23 +11,29 @@
 <body>
 
     <!--Game Title-->
-    <div class="title">
+    <header class="title">
         <h1>RPS PvC <i class="fa-solid fa-bolt"></i></h1>
-    </div>
+    </header>
 
     <!--Game buttons here!-->
-    <div class="options">
+    <main class="options">
         <button class="selection" value="Rock"><i class="fa-sharp fa-solid fa-hand-fist"></i></button>
         <button class="selection" value="Paper"><i class="fa-sharp fa-solid fa-hand"></i></button>
         <button class="selection" value="Scissors"><i class="fa-sharp fa-solid fa-hand-peace"></i></button>
-    </div>
+    </main>
 
     <!--Score area here!-->
     <div class="score-area">
         <div>
             <p class="scores">Player <span id="player-score">0</span></p>
-            <p class="scores">Computer <span id="computer-score">0</span></p>
+            <p class="scores">Comp. <span id="computer-score">0</span></p>
     </div>
+
+    <div class="instructions">
+        <p>This is a game of Rock, Paper, Scissors. Make a choice and see if you can beat the computer!</p>
+    </div>
+
+    <footer>Copyright 2023 Apollon.G. All rights reserved. Created as a course project at Code Institute.</footer>
     
     <script src="assets/js/script.js"></script>
 </body>
