@@ -56,7 +56,22 @@ function playGame () {
      })
 }
 
+function displayWinner (winner, playerChoice, computerChoice) {
+    if (winner == player) {
+        'You Win!'
+    }
+    else if (winner == computer) {
+        'Computer Win!'
+    }
+    else {
+         'Tie!'
+    }
+}
+
+
 playGame()
+
+
 
 
 
