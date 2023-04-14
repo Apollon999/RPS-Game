@@ -39,12 +39,28 @@ function getResult (playerChoice, computerChoice) {
     return winner;
 }
 
+function displayWinner (winner, playerChoice, computerChoice) {
+
+    const choiceDiv = document.getElementsByClassName ('choice') [0];
+
+    if (winner == 'player') {
+        choiceDiv.innerText = 'You Win!';
+    }
+    else if (winner == 'computer') {
+        choiceDiv.innerText = 'Computer Win!';
+    }
+    else {
+        choiceDiv.innerText = 'Tie!'
+    }
+}
+
 function onClickRPS(playerChoice) {
 console.log({playerChoice});
 const computerChoice = getComputerChoice();
 console.log({computerChoice})
 const winner = getResult (playerChoice, computerChoice);
 console.log({winner})
+displayWinner(winner, playerChoice, computerChoice)
 }
 
 function playGame () {
@@ -56,23 +72,4 @@ function playGame () {
      })
 }
 
-function displayWinner (winner, playerChoice, computerChoice) {
-    if (winner == player) {
-        'You Win!'
-    }
-    else if (winner == computer) {
-        'Computer Win!'
-    }
-    else {
-         'Tie!'
-    }
-}
-
-
 playGame()
-
-
-
-
-
-
