@@ -41,16 +41,21 @@ function getResult (playerChoice, computerChoice) {
 
 function displayWinner (winner, playerChoice, computerChoice) {
 
-    const choiceDiv = document.getElementsByClassName ('choice') [0];
+    const winnerDiv = document.getElementsByClassName ('winner') [0];
+    const choicesDiv = document.getElementById ('choices');
+
+    // emoji code found at https://unicode.org/emoji/charts/full-emoji-list.html and learn how to use emojis at https://hollybourneville.medium.com/how-to-use-emojis-in-html-b3c671e21b92 
+
+    choicesDiv.innerHTML = ` &#x1f471; : ${playerChoice}<br> &#x1f916; : ${computerChoice}`;
 
     if (winner == 'player') {
-        choiceDiv.innerText = 'You Win!';
+        winnerDiv.innerText = 'You Win!';
     }
     else if (winner == 'computer') {
-        choiceDiv.innerText = 'Computer Win!';
+        winnerDiv.innerText = 'Computer Win!';
     }
     else {
-        choiceDiv.innerText = 'Tie!'
+        winnerDiv.innerText = 'Tie!'
     }
 }
 
