@@ -1,9 +1,9 @@
-// Declaring the variables playerScore and computerScore
+// Declaring the variables playerScore and computerScore to make sure the game starts at 0-0.
 
 let playerScore = 0;
 let computerScore = 0;
 
-// Computer generates a random choice and returns it
+// Computer generates a random choice and returns it, thanks for help https://discuss.codecademy.com/t/help-with-rock-paper-scissors-javascript-game/450112 and code institute slack forum.
 
 function getComputerChoice () {
    const rpsChoice =['Rock', 'Paper', 'Scissors'];
@@ -11,7 +11,7 @@ function getComputerChoice () {
    return rpsChoice[randomNumber];
 }
 
-// Decides the winner of the game and adds one point to the winner or does nothning in the event of a tie.
+// Decides the winner of the game and updates the score.
 
 function getResult (playerChoice, computerChoice) {
     
@@ -39,6 +39,8 @@ function getResult (playerChoice, computerChoice) {
     return winner;
 }
 
+// Displays the outcome of the game including the coices made by player and computer and the winner of the game.
+
 function displayWinner (winner, playerChoice, computerChoice) {
 
     const winnerDiv = document.getElementsByClassName ('winner') [0];
@@ -58,6 +60,8 @@ function displayWinner (winner, playerChoice, computerChoice) {
         winnerDiv.innerText = 'Tie!'
     }
 }
+
+// This function sets up the game by adding onclick event listeners to the buttons of the page
 
 function onClickRPS(playerChoice) {
 console.log({playerChoice});
