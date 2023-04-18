@@ -3,10 +3,10 @@
 let playerScore = 0;
 let computerScore = 0;
 
-// Computer generates a random choice and returns it, thanks for help https://discuss.codecademy.com/t/help-with-rock-paper-scissors-javascript-game/450112 and code institute slack forum.
+// Computer generates a random choice and returns it, thanks for help https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/ and code institute slack forum.
 
 function getComputerChoice () {
-   const rpsChoice =['Rock', 'Paper', 'Scissors'];
+   var rpsChoice =['Rock', 'Paper', 'Scissors'];
    const randomNumber = Math.floor(Math.random() * 3);
    return rpsChoice[randomNumber];
 }
@@ -14,7 +14,6 @@ function getComputerChoice () {
 // Decides the winner of the game and updates the score.
 
 function getResult (playerChoice, computerChoice) {
-    
     let winner;
 
     if (playerChoice == computerChoice) {
@@ -35,14 +34,14 @@ function getResult (playerChoice, computerChoice) {
     } else if (winner == 'computer') {
         computerScore++;
         document.getElementById('computer-score').textContent = computerScore;
-}
+    }
+
     return winner;
 }
 
 // Displays the outcome of the game including the coices made by player and computer and the winner of the game.
 
 function displayWinner (winner, playerChoice, computerChoice) {
-
     const winnerDiv = document.getElementsByClassName ('winner') [0];
     const choicesDiv = document.getElementById ('choices');
 
@@ -50,27 +49,28 @@ function displayWinner (winner, playerChoice, computerChoice) {
 
     choicesDiv.innerHTML = ` &#x1f471; : ${playerChoice}<br> &#x1f916; : ${computerChoice}`;
 
+    //thanks to https://plainenglish.io/blog/how-to-replace-text-inside-a-div-element-with-javascript for teaching out how to properly use innerText.
     if (winner == 'player') {
         winnerDiv.innerText = 'You Win!';
-    }
-    else if (winner == 'computer') {
+    } else if (winner == 'computer') {
         winnerDiv.innerText = 'Computer Win!';
-    }
-    else {
+    } else {
         winnerDiv.innerText = 'Tie!'
     }
 }
 
-// This function sets up the game by adding onclick event listeners to the buttons of the page
+// This function sets up the game by adding onclick event listeners to the buttons of the page.
 
 function onClickRPS(playerChoice) {
-console.log({playerChoice});
-const computerChoice = getComputerChoice();
-console.log({computerChoice})
-const winner = getResult (playerChoice, computerChoice);
-console.log({winner})
-displayWinner(winner, playerChoice, computerChoice)
+    console.log({playerChoice});
+    const computerChoice = getComputerChoice();
+    console.log({computerChoice})
+    const winner = getResult (playerChoice, computerChoice);
+    console.log({winner})
+    displayWinner(winner, playerChoice, computerChoice)
 }
+
+// this function triggers the onClick function with the right value when a button is clicked.
 
 function playGame () {
      const buttons = document.querySelectorAll('.selection');
@@ -81,4 +81,4 @@ function playGame () {
      })
 }
 
-playGame()
+playGame();

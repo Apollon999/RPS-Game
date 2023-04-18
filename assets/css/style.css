@@ -81,6 +81,8 @@ body {
   margin-top: 10px;
 }
 
+/* styling instructions and footer here*/
+
 .instructions {
   margin-top: 100px;
   background: azure;
@@ -95,6 +97,8 @@ footer {
   text-align: center;
   font-size: 18px;
 }
+
+/* styling the winnerdiv and choicesdiv here!*/
 
 .winner {
   display: flex;
