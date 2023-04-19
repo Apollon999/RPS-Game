@@ -6,12 +6,12 @@ let computerScore = 0;
 // Computer generates a random choice and returns it, thanks for help https://css-tricks.com/lots-of-ways-to-use-math-random-in-javascript/ and code institute slack forum.
 
 function getComputerChoice () {
-   var rpsChoice =['Rock', 'Paper', 'Scissors'];
+   var cChoice =['Rock', 'Paper', 'Scissors'];
    const randomNumber = Math.floor(Math.random() * 3);
-   return rpsChoice[randomNumber];
+   return cChoice[randomNumber];
 }
 
-// Decides the winner of the game and updates the score.
+// Decides the winner of the game and updates the score. Thanks to stackoverflow community https://stackoverflow.com/questions/75124589/javascript-rock-paper-scissors-game-issue-with-the-score . 
 
 function getResult (playerChoice, computerChoice) {
     let winner;
@@ -50,6 +50,7 @@ function displayWinner (winner, playerChoice, computerChoice) {
     choicesDiv.innerHTML = ` &#x1f471; : ${playerChoice}<br> &#x1f916; : ${computerChoice}`;
 
     //thanks to https://plainenglish.io/blog/how-to-replace-text-inside-a-div-element-with-javascript for teaching out how to properly use innerText.
+    
     if (winner == 'player') {
         winnerDiv.innerText = 'You Win!';
     } else if (winner == 'computer') {
@@ -59,7 +60,7 @@ function displayWinner (winner, playerChoice, computerChoice) {
     }
 }
 
-// This function sets up the game by adding onclick event listeners to the buttons of the page.
+// This function sets up the game by adding onclick event listeners to the buttons of the page. 
 
 function onClickRPS(playerChoice) {
     console.log({playerChoice});
